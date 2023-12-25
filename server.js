@@ -113,7 +113,7 @@ mongoose.
     });
 const db = mysql.createConnection({
     user: "root",
-    host: "127.0.0.1",
+    host: "localhost",
     password: "ntnu3528",
     database: "VenueRentSystem",
 });
