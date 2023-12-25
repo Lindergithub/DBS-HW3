@@ -10,11 +10,11 @@ const venueRoute = require('./routes/venueroute')
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app .use('/api/venues', venueRoute)
-
-/*
 app.get('/', (req, res) => {
     res.send('Hello NODE API')
 })
+/*
+
 
 
 //read all
@@ -101,7 +101,7 @@ mongoose.
     connect(MONGO_URL)
     .then(() => {
         console.log('connected to MongoDB')
-        app.listen(PORT, () => {
+        app.listen(3000, () => {
             console.log(`Node API app is running on port ${PORT}`)
         });
     }).catch((error) => {
