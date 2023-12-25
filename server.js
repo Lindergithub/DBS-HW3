@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 8000
 
 const express = require('express')
 const mongoose = require('mongoose')
-// const Venue = require('./models/venuemodel')
+//const Venue = require('./models/venuemodel')
 const app = express()
 const venueRoute = require('./routes/venueroute')
 app.use(express.json())
@@ -13,9 +13,9 @@ app .use('/api/venues', venueRoute)
 app.get('/', (req, res) => {
     res.send('Hello NODE API')
 })
+
+
 /*
-
-
 
 //read all
 app.get('/venues', async (req, res) => {
@@ -26,6 +26,7 @@ app.get('/venues', async (req, res) => {
         res.status(500).json({ message: error.message })
     }
 })
+
 //read venue by id
 app.get('/venues/:id', async (req, res) => {
     try {
@@ -101,7 +102,7 @@ mongoose.
     connect(MONGO_URL)
     .then(() => {
         console.log('connected to MongoDB')
-        app.listen(3000, () => {
+        app.listen(8000, () => {
             console.log(`Node API app is running on port ${PORT}`)
         });
     }).catch((error) => {
