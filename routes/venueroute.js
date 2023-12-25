@@ -3,9 +3,7 @@ const express = require('express')
 const router = express.Router()
 // const Venue = require('../models/venuemodel')
 const {readVenues, readVenue, createVenue, updateVenue, deleteVenue} = require('../controllers/venuecontroller')
-router.get('/',readVenues,(req, res) => {
-    res.send('Hello NODE API')
-})
+
 //read all
 router.get('/', readVenues)
 
